@@ -2,5 +2,6 @@ sec02 - mini-ms-app
 ~~~~~~~~~~~~~~~~~~~~
 ep13-14 - posts service creation
 ep15-16 - comments service creation
+ep17-25 - client v1
 
 
