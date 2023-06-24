@@ -12,4 +12,11 @@ ep17-25 - client v1
 - creating comments
 - fetching and rendring comments
 
+ep26-35 - event bus & query service
+- request minimiztion strategies
+- an async solution
+- common questions around async events
+- event bus overview
+- basic event bus implementation
+- query service
 
