@@ -29,3 +29,5 @@ ep36-48 - moderation feature service
 - update queryMS:
     * handle CommentUpdated event
 - client: rendering comments by status
+
+ep49-52 - event syncing
