@@ -20,3 +20,12 @@ ep26-35 - event bus & query service
 - basic event bus implementation
 - query service
 
+ep36-48 - moderation feature service
+- create moderationMS:
+    * handle CommentCreated event
+- update commentsMS: 
+    * adding status property
+    * handle CommentModerated event
+- update queryMS:
+    * handle CommentUpdated event
+- client: rendering comments by status
