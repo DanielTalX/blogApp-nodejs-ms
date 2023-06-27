@@ -31,3 +31,6 @@ ep36-48 - moderation feature service
 - client: rendering comments by status
 
 ep49-52 - event syncing
+
+
+npm config set registry https://registry.npmjs.org/
