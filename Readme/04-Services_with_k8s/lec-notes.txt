@@ -1,0 +1,10 @@
+sec04 - services-with-k8s
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+ep61-87 - services-with-k8s-part1
+- install k8s
+- k8s tour & commands
+- alias via ~/.bash_profile
+- pods, deployments, networking, services - NodePort, ClusterIP
+- docker-hub
+- infra folder: k8s and scripts
+- apply k8s on ms: posts, event-bus, comments, query, moderation

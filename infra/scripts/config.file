@@ -1,0 +1,5 @@
+IMAGES=('posts' 'comments' 'moderation' 'query' 'event-bus')
+PROJECT_DIR='/blogApp-nodejs-ms/'
+DOCKER_ID=mydockerid
+PROJECT_NAME=blogapp
+SLEEP=10

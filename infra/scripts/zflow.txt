@@ -1,0 +1,21 @@
+1. go to ms dir
+cd ${PROJECT_DIR}/${ms}
+
+2. build the image with tag
+docker build -t ${my_docker_id}/${blogApp}:${ms} .
+
+3. tag for docker hub
+docker tag ${my_docker_id}/${blogApp}:${ms} ${my_docker_id}/${blogApp}:${ms}
+
+4. push the image to docker hub
+docker push ${my_docker_id}/${blogApp}:${ms}
+
+5. create a deployment for the image
+6. create a cluster ip service for image
+
+7. go to infra/k8s dir
+cd ${PROJECT_DIR}/infra/k8s;
+
+8. apply or restart image
+kubectl apply -f ${ms}-depl.yaml
+kubectl rollout restart deployment ${ms}-depl
