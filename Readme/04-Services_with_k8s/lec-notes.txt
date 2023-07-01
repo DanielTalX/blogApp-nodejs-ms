@@ -25,3 +25,14 @@ ep61-87 - services-with-k8s-part2
     * macOS: code /etc/hosts
 - deploy react app
 - route config
+
+ep100-104 - services-with-k8s-part3
+- skaffold - https://skaffold.dev/docs/
+    Skaffold is a command line tool that facilitates continuous development for container based & Kubernetes applications
+- install skaffold
+    * https://skaffold.dev/docs/install/
+    * for update - from terminal out vsc
+        * brew install skaffold
+        * brew reinstall skaffold
+        * brew version
+        * reopen vsc
