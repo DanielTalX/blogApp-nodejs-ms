@@ -21,6 +21,8 @@ yarn-debug.log*
 yarn-error.log*
 
 node_modules
+/infra/output
+/infra/scripts/config-dev.file
 
 /zResoures
 /zReadme

@@ -2,12 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
 
+const port = 4003;
 const app = express();
 app.use(bodyParser.json());
 
 const event_bus_url = "http://event-bus-srv:4005"; // "http://localhost:4005"
 
 app.post('/events', async (req, res) => {
+  console.log(`moderation - post - /events`);
   const { type, data } = req.body;
 
   if (type === 'CommentCreated') {
@@ -27,6 +29,7 @@ app.post('/events', async (req, res) => {
   res.send({});
 });
 
-app.listen(4003, () => {
-  console.log('Listening on 4003');
+app.listen(port, () => {
+  console.log(`moderation - Listening on ${port}, ${new Date().toISOString()}`);
+  console.log("v1")
 });

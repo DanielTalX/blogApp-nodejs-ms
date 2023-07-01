@@ -1,7 +1,5 @@
 source ./config.file
-all_images=$IMAGES
-images=('posts')
-for image in "${images[@]}"
+for image in "${IMAGES[@]}"
 do
     echo "start build & push ${image}"
     local_image=${DOCKER_ID}/${image}

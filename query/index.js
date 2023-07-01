@@ -7,6 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+const port = 4002;
 const event_bus_url = "http://event-bus-srv:4005"; // "http://localhost:4005"
 const posts = {};
 
@@ -38,10 +39,12 @@ const handleEvent = (type, data) => {
 };
 
 app.get("/posts", (req, res) => {
+  console.log(`qury - get - /posts`)
   res.send(posts);
 });
 
 app.post("/events", (req, res) => {
+  console.log(`qury - post - /events`)
   const { type, data } = req.body;
 
   handleEvent(type, data);
@@ -49,8 +52,11 @@ app.post("/events", (req, res) => {
   res.send({});
 });
 
-app.listen(4002, async () => {
-  console.log("Listening on 4002");
+
+app.listen(port, async () => {
+  console.log(`query - Listening on ${port}, ${new Date().toISOString()}`);
+  console.log("v1")
+
   try {
     const res = await axios.get(`${event_bus_url}/events`);
 

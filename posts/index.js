@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+const port = 4000;
 const event_bus_url = "http://event-bus-srv:4005"; // "http://localhost:4005"
 const posts = {};
 
@@ -15,7 +16,8 @@ app.get("/posts", (req, res) => {
   res.send(posts);
 });
 
-app.post("/posts", async (req, res) => {
+app.post("/posts/create", async (req, res) => {
+  console.log("posts - post - /posts/create");
   const id = randomBytes(4).toString("hex");
   const { title } = req.body;
 
@@ -30,11 +32,11 @@ app.post("/posts", async (req, res) => {
 });
 
 app.post("/events", (req, res) => {
-  console.log("Received Event", req.body.type);
-
+  console.log("posts - post - /events - Received Event", req.body.type);
   res.send({});
 });
 
-app.listen(4000, () => {
-  console.log("Listening on 4000");
+app.listen(port, () => {
+  console.log(`posts - Listening on ${port}, ${new Date().toISOString()}`);
+  console.log("v1")
 });

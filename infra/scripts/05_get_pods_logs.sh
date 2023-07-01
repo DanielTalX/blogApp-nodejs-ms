@@ -1,11 +1,12 @@
 source ./config.file
 pods=($(kubectl get pods --no-headers -o custom-columns=":metadata.name"))
-all_images=$IMAGES
-filter='posts'
+echo "get log of ${pods[@]}"
 for pod in "${pods[@]}"
 do
-    echo "----- ${pod} -----"
-    echo "get log of ${pod}"
+    echo "----------------------------"
+    echo "------- start ${pod} -------"
     kubectl logs ${pod}
-    echo "end log of ${pod}"
+    echo "------- end ${pod} -------"
+    echo "----------------------------"
+    echo " "
 done

@@ -1,10 +1,27 @@
 sec04 - services-with-k8s
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 ep61-87 - services-with-k8s-part1
-- install k8s
+- install k8s via docker_desktop app
 - k8s tour & commands
 - alias via ~/.bash_profile
 - pods, deployments, networking, services - NodePort, ClusterIP
 - docker-hub
 - infra folder: k8s and scripts
 - apply k8s on ms: posts, event-bus, comments, query, moderation
+
+ep61-87 - services-with-k8s-part2
+- Load Balancer and Ingress
+- install Ingress-Nginx 
+    https://github.com/kubernetes/ingress-nginx
+    https://kubernetes.github.io/ingress-nginx/deploy/
+    verify by:
+    * kubectl get pods --namespace=ingress-nginx
+    * windows: netstat -anb
+        => TCP   0.0.0.0:80   0.0.0.0:0   LISTENING
+    * macOS: (sudo) lsof -i tcp:80
+        => com.docke 8263 user  113u  IPv6 0xa20e89998489120d      0t0  TCP *:http (LISTEN)
+- host file teak
+    * windows: C:\Windows\System32\Drivers\etc\hosts
+    * macOS: code /etc/hosts
+- deploy react app
+- route config

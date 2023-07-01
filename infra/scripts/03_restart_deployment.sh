@@ -1,7 +1,5 @@
 source ./config.file
-all_images=$IMAGES
-images=('posts')
-for image in "${images[@]}"
+for image in "${IMAGES[@]}"
 do
     echo "start restart ${image}"
     cd ${PROJECT_DIR}/infra/k8s;

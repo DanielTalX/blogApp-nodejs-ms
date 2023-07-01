@@ -1,4 +1,5 @@
-IMAGES=('posts' 'comments' 'moderation' 'query' 'event-bus')
+ALL_IMAGES=('posts' 'comments' 'moderation' 'query' 'event-bus' 'client')
+IMAGES=('posts' 'comments' 'moderation' 'query' 'event-bus' 'client')
 PROJECT_DIR='/blogApp-nodejs-ms/'
 DOCKER_ID=mydockerid
 PROJECT_NAME=blogapp
